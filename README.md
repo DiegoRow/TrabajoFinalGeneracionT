@@ -1,11 +1,12 @@
 # Projecto Final Generación T
 ## Integrantes:
  - Diego Ceballos
- -
- -
+ - Fernando Barrera Soto
+ - Agustín Avalos Urbano
 
 
-## Resumen Project
+## Resumen del Projecto
+ 
 
 ## Objetivo Principal
 
