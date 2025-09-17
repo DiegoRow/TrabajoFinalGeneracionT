@@ -11,7 +11,7 @@
 
 .Navar > *{
     /* background-color: red; */
-    border: 3px solid white;
+    /* border: 3px solid white; */
     display: flex;
     align-items: center;
 }
@@ -22,13 +22,30 @@
     border-radius: .5em;
 }
 
+.carAndLogin{
+    /* width: 25%; */
+    height: 6em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.centradorxd{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.logos{
+    color: white;
+    font-family: "Comic Relief";
+    font-size: 1.2em;
+    /* border: 2px solid white; */
+}
+
+
 @media only screen and (max-width: 600px) {
     .Navar{
         height: 5em;
     }
 }
-
-/* .logotipo, .search, .carAndLogin{
-    display: flex;
-    align-items: center;
-} */

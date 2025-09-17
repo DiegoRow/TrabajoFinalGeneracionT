@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@700&family=Lexend+Giga:wght@100..900&display=swap');
+
+.textlol{
+    justify-self: center;
+    margin: 1em;
+    font-weight: bolder;
+    font-size: 1.5em;
+    font-family: "Lexend Giga", sans-serif;
+    border: 2px solid black;
+    border-radius: 1em;
+    padding: .2em;
+    background-color: white;
+}
+
+.grilla{
+    justify-self: center;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    margin-top: 6em;
+}
+
+.product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: .5em;
+    background-color: rgb(255, 198, 198);
+    border-radius: 1em;
+    box-shadow: 2px 2px 10px black;
+    height: 10em;
+    margin: 1em;
+}
+.product > *:nth-child(2){
+    color: blue;
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    align-self: center;
+    justify-self: center;
+    height: 7em;
+    border-radius: 1em;
+}
+
+.product > *:nth-child(1){
+    justify-self: center;
+    align-self: center;
+}
+.product > *:nth-child(3){
+    /* justify-self: center; */
+    align-self: center;
+    font-size: 1.5em;
+    font-family: "Comic Relief";
+    color: black;
+}

@@ -30,10 +30,6 @@ function App() {
           ]
         } />
       </Routes>
-
-      <footer>
-
-      </footer>
     </BrowserRouter>
   )
 }
