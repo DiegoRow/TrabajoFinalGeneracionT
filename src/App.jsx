@@ -29,6 +29,18 @@ function App() {
 
           ]
         } />
+        {/* login, (decorativo, no creo hacerlo :v) */}
+        <Route path='/login' element={
+          [
+
+          ]
+        } />
+        {/* pagina que redirige a la main, el profe explico como hacerlo */}
+        <Route path='/notFound' element={
+          [
+
+          ]
+        } />
       </Routes>
     </BrowserRouter>
   )

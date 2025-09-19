@@ -13,7 +13,7 @@ export default function NavBar() {
 
             <div className="search">
                 <input type="text" name="" id="" placeholder="Busque su Producto" />
-                <SearchIcon></SearchIcon>
+                <SearchIcon fontSize="large"></SearchIcon>
             </div>
 
             <div className="carAndLogin">

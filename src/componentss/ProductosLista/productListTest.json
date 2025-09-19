@@ -40,5 +40,35 @@
         "nombre": "Producto G",
         "imagen": "7",
         "precio": 1500
+    },
+    {
+        "id": 3,
+        "nombre": "Producto C",
+        "imagen": "3",
+        "precio": 1800
+    },
+    {
+        "id": 4,
+        "nombre": "Producto D",
+        "imagen": "4",
+        "precio": 3200
+    },
+    {
+        "id": 5,
+        "nombre": "Producto E",
+        "imagen": "5",
+        "precio": 2750
+    },
+    {
+        "id": 6,
+        "nombre": "Producto F",
+        "imagen": "6",
+        "precio": 4000
+    },
+    {
+        "id": 7,
+        "nombre": "Producto G",
+        "imagen": "7",
+        "precio": 1500
     }
 ]

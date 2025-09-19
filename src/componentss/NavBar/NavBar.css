@@ -1,51 +1,55 @@
-.Navar{
-    height: 7em;
-    background-color: rgb(23, 29, 21);
-    display: grid;
-    grid-template-columns: 30% 25% 35%;
-    color: white;
-    align-content: center;
-    justify-items: end;
+@media only screen and (min-width:700px) {
+    .Navar {
+        height: 7em;
+        background-color: rgb(23, 29, 21);
+        display: grid;
+        grid-template-columns: 30% 25% 35%;
+        color: white;
+        align-content: center;
+        justify-items: end;
 
+    }
+
+    .Navar>* {
+        /* background-color: red; */
+        /* border: 3px solid white; */
+        display: flex;
+        align-items: center;
+    }
+
+    .logotype {
+        height: 50px;
+        aspect-ratio: 1/1;
+        border-radius: .5em;
+    }
+
+    .carAndLogin {
+        /* width: 25%; */
+        height: 6em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .centradorxd {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+    }
+
+    .logos {
+        color: white;
+        font-family: "Comic Relief";
+        font-size: 1.2em;
+        /* border: 2px solid white; */
+    }
 }
 
-.Navar > *{
-    /* background-color: red; */
-    /* border: 3px solid white; */
-    display: flex;
-    align-items: center;
-}
 
-.logotype{
-    height: 50px;
-    aspect-ratio: 1/1;
-    border-radius: .5em;
-}
-
-.carAndLogin{
-    /* width: 25%; */
-    height: 6em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-}
-
-.centradorxd{
-    display: flex;
-    align-items: center;
-    gap: .5em;
-}
-
-.logos{
-    color: white;
-    font-family: "Comic Relief";
-    font-size: 1.2em;
-    /* border: 2px solid white; */
-}
 
 
 @media only screen and (max-width: 600px) {
-    .Navar{
+    .Navar {
         height: 5em;
     }
 }
