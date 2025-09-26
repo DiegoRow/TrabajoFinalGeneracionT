@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom"
-import "./Productos.css"
+import "./css/Productos.css"
 
 
-export default function Productito({ id, nombre, imagen, precio }){
-    return(
-        <Link to={"/" + nombre} className="product">
+export default function Productito({ id, nombre, imagen, precio, viewmode }) {
+    return (
+        <Link
+            to={`/producto/${id}`}
+            className={viewmode ? "productList" : "product"}
+        >
             <p>{nombre}</p>
-            <img src={imagen} alt={"product-" + nombre} />
+            <img src={imagen} alt={"product-" + id} />
             <p>{"$" + precio}</p>
         </Link>
     )

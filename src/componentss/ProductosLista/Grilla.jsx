@@ -1,21 +1,10 @@
 import * as React from 'react';
-import "./Productos.css"
+import "./css/Productos.css"
 import Productito from "./Product.jsx"
 import Checador from "./CheckBoxChanger/CustomCheckbox.jsx"
-import data from "./productListTest.json"
+import data from "/public/productListTest.json"
 
 
-// .map para que cree un producto por cada item que detecte
-const eachProduct = data.map((e) => {
-    return <Productito
-        key={e.id}
-        nombre={e.nombre}
-        imagen={e.imagen}
-        precio={e.precio}
-    />
-})
-
-// agarramos el grid en barras
 
 export default function Grilla() {
 
@@ -25,9 +14,18 @@ export default function Grilla() {
     // cambiar la clase cuando cambia el checkbox
     const CheckChanged = (check) => {
         setChequeado(check);
-        console.log("el hijo cambió a", check)
+        // console.log("el checkbox está en ", check)
     }
 
+    const eachProduct = data.map((e) => {
+        return <Productito
+            id={e.id}
+            nombre={e.nombre}
+            imagen={e.imagen}
+            precio={e.precio}
+            viewmode={Chequeado}
+        />
+    })
     return (
         <>
             <div className="textlol">
@@ -40,6 +38,9 @@ export default function Grilla() {
                 <div
                     className={`${Chequeado ? "grillaRow" : "grilla"}`}
                     style={Chequeado ? { "--num-rows": data.length } : {}}>
+
+
+                    {/* .map para que cree un producto por cada item que detecte en el json*/}
                     {eachProduct}
                 </div>
             </div>
