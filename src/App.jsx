@@ -2,6 +2,7 @@ import './App.css'
 import NavBar from './componentss/NavBar/NavBar'
 import Grilla from './componentss/ProductosLista/Grilla'
 import SelectProduct from "./componentss/ProdSelected/SelectProduct.jsx"
+import Carrito from "./componentss/Carrito/Carrito.jsx"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -20,14 +21,14 @@ function App() {
         {/* SubSeccion */}
         <Route path='/producto/:id' element={
           [
-            <SelectProduct/>
+            <SelectProduct />
           ]
         } />
 
         {/* Carrito */}
         <Route path='/carrito' element={
           [
-
+            <Carrito />
           ]
         } />
         {/* login, (decorativo, no creo hacerlo :v) */}

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import data from "/public/productListTest.json"
+import data from "/src/JsonDB/productListTest.json"
 import "./SelectProduct.css"
 
 
@@ -18,11 +18,16 @@ export default function SelectProduct() {
         )
     }
 
+
+    const defaultImage = (e) => {
+        e.target.src = "/imgProducts/sin-imagen.jpg"
+    }
+
     return (
         <div>
             <p>Nombre del Producto es {papuducto.nombre}</p>
             <p>con descripcion: {papuducto.desc}</p>
-            <img src={papuducto.imagen} alt={papuducto.nombre} />
+            <img src={papuducto.imagen} alt={papuducto.nombre} onError={defaultImage} />
             <p>precio: {papuducto.precio} </p>
         </div>
     )

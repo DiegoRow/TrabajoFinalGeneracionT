@@ -1,8 +1,9 @@
 import * as React from 'react';
 import "./css/Productos.css"
+import "./css/ProductosPhone.css"
 import Productito from "./Product.jsx"
 import Checador from "./CheckBoxChanger/CustomCheckbox.jsx"
-import data from "/public/productListTest.json"
+import data from "/src/JsonDB/productListTest.json"
 
 
 

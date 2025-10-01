@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@700&family=Lexend+Giga:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@700&family=Lexend+Giga:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+@font-face {
+    font-family: SFR PRO DISPLAY;
+    src: url(/src/Fonts/SFPRODISPLAYREGULAR.OTF) format('truetype');
+}
 
 @media only screen and (min-width:700px) {
     .textlol {
@@ -25,6 +30,7 @@
         border: 8px double black;
         font-family: "Lexend Giga";
         color: white;
+        margin-bottom: 1em;
     }
 
     .cuadroORow {
@@ -54,8 +60,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(var(--num-rows, 10px));
-        /* grid-template-rows: 1fr 1fr; */
-        gap: 1em;
+        /* gap: 1em; */
     }
 
 
@@ -65,17 +70,21 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: .5em;
-        background-color: rgb(255, 198, 198);
+        background-color: rgb(224, 181, 124);
         border-radius: 1em;
         box-shadow: 2px 2px 10px black;
         height: 10em;
         margin: 1em;
     }
+
     /* Nombre del Producto */
     .product>*:nth-child(1) {
         justify-self: center;
         align-self: center;
-        font-family: "Comic Relief";
+        font-family: "SFR PRO DISPLAY";
+        font-size: 1.1em;
+        text-align: center;
+        color: black;
     }
 
     /* Imagen del Producto */
@@ -93,42 +102,60 @@
     .product>*:nth-child(3) {
         align-self: center;
         font-size: 1.5em;
-        font-family: "Comic Relief";
+        font-family: "Roboto Flex";
+        text-align: center;
+        font-weight: bolder;
         color: black;
     }
 
+    /* Vista en Lista */
     .productList {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 30% 60% 10%;
+        /* grid-template-rows: 1fr; */
         gap: .5em;
-        background-color: rgb(255, 198, 198);
+        background-color: rgb(224, 181, 124);
         border-radius: 1em;
         box-shadow: 2px 2px 10px black;
-        height: 10em;
+        height: 5em;
         margin: 1em;
+        margin-top: .5em;
     }
 
     .productList>*:nth-child(1) {
-        justify-self: center;
+        justify-self: start;
         align-self: center;
-        font-family: "Comic Relief";
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        font-family: "SFR PRO DISPLAY";
+        font-size: 1.2em;
+        color: black;
     }
 
     .productList>*:nth-child(2) {
         color: blue;
-        grid-row: 1 / 3;
         grid-column: 1 / 2;
+        grid-row: 1 / 3;
         align-self: center;
         justify-self: center;
-        height: 7em;
-        border-radius: 1em;
+        height: 4em;
+        border-radius: .5em;
     }
 
     .productList>*:nth-child(3) {
         align-self: center;
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
         font-size: 1.5em;
-        font-family: "Comic Relief";
+        font-family: "Roboto Flex";
+        font-weight: bolder;
         color: black;
+    }
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        text-decoration: none;
     }
 }

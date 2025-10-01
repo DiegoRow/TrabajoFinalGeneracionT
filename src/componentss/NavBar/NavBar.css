@@ -46,10 +46,51 @@
 }
 
 
-
-
-@media only screen and (max-width: 600px) {
+/* Media Query para celus */
+@media only screen and (max-width:700px) {
     .Navar {
-        height: 5em;
+        height: auto;
+        background-color: rgb(23, 29, 21);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: .5em;
+        gap: .5em;
+        color: white;
+    }
+
+    .Navar>* {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logotype {
+        height: 40px;
+        aspect-ratio: 1/1;
+        border-radius: .4em;
+    }
+
+    .carAndLogin {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: .3em 0;
+    }
+
+    .centradorxd {
+        display: flex;
+        align-items: center;
+        gap: .3em;
+    }
+
+    .logos {
+        color: white;
+        font-family: "Comic Relief";
+        font-size: 1em;
+        text-align: center;
     }
 }

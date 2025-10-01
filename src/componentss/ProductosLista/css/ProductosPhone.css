@@ -1,4 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@700&family=Lexend+Giga:wght@100..900&display=swap');
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width:700px) {
+    .textlol {
+        justify-self: center;
+        margin: .5em;
+        font-weight: bold;
+        font-size: 1.2em;
+        font-family: "Lexend Giga", sans-serif;
+        border: 2px solid black;
+        border-radius: .7em;
+        padding: .3em .6em;
+        background-color: white;
+        text-align: center;
+    }
+
+    /* zona para productos */
+    .marco {
+        background-color: gray;
+        width: 95vw;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 1em;
+        border: 4px double black;
+        font-family: "Lexend Giga", sans-serif;
+        color: white;
+        padding: .5em;
+        margin-bottom: 1em;
+    }
+
+    .cuadroORow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(104, 0, 0, 0.329);
+        border-radius: .7em;
+        height: 2.5em;
+        font-size: .9em;
+        text-align: center;
+    }
+
+    .grilla {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .8em;
+        position: relative;
+        margin-top: 1em;
+    }
+
+    .grillaRow {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: .8em;
+    }
+
+    /* CSS para cada producto */
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(224, 181, 124);
+        border-radius: 1em;
+        box-shadow: 2px 2px 8px black;
+        padding: .7em;
+        margin: .5em auto;
+        width: 90%;
+    }
+
+    /* Nombre del Producto */
+    .product>*:nth-child(1) {
+        font-family: "SFR PRO DISPLAY";
+        color: black;
+        font-size: 1.1em;
+        margin-bottom: .3em;
+        text-align: center;
+    }
+
+    /* Imagen del Producto */
+    .product>*:nth-child(2) {
+        grid-row: auto;
+        grid-column: auto;
+        height: 6em;
+        border-radius: .7em;
+        margin-bottom: .5em;
+    }
+
+    /* Precio del Producto */
+    .product>*:nth-child(3) {
+        font-size: 1.3em;
+        font-family: "Roboto Flex";
+        color: black;
+        margin-top: .3em;
+    }
+
+    /* Vista en Lista */
+    .productList {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(224, 181, 124);
+        border-radius: .7em;
+        box-shadow: 2px 2px 8px black;
+        height: auto;
+        padding: .5em;
+        margin: .5em auto;
+        width: 90%;
+        gap: 1em;
+    }
+
+    .productList>*:nth-child(1) {
+        font-family: "SFR PRO DISPLAY";
+        font-size: 1em;
+        color: black;
+        margin-left: .5em;
+    }
+
+    .productList>*:nth-child(2) {
+        height: 3.5em;
+        border-radius: .5em;
+    }
+
+    .productList>*:nth-child(3) {
+        font-size: 1.2em;
+        font-family: "Roboto Flex";
+        color: black;
+        margin-right: .5em;
+    }
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        text-decoration: none;
+    }
 }

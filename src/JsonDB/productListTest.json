@@ -9,42 +9,42 @@
     {
         "id": 2,
         "nombre": "Producto B",
-        "imagen": "2",
+        "imagen": "/imgProducts/2",
         "desc": "Descripcion2",
         "precio": 2500
     },
     {
         "id": 3,
         "nombre": "Producto C",
-        "imagen": "3",
+        "imagen": "/imgProducts/3",
         "desc": "Descripcion3",
         "precio": 1800
     },
     {
         "id": 4,
         "nombre": "Producto D",
-        "imagen": "4",
+        "imagen": "/imgProducts/4",
         "desc": "Descripcion4",
         "precio": 3200
     },
     {
         "id": 5,
         "nombre": "Producto E",
-        "imagen": "5",
+        "imagen": "/imgProducts/5",
         "desc": "Descripcion5",
         "precio": 2750
     },
     {
         "id": 6,
         "nombre": "Producto F",
-        "imagen": "6",
+        "imagen": "/imgProducts/6",
         "desc": "Descripcion7",
         "precio": 4000
     },
     {
         "id": 7,
         "nombre": "Producto G",
-        "imagen": "7",
+        "imagen": "/imgProducts/7",
         "desc": "Descripcion8",
         "precio": 1500
     }
