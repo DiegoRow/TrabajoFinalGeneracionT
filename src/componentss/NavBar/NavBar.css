@@ -7,9 +7,8 @@
         color: white;
         align-content: center;
         justify-items: end;
-
+        width: 100%;
     }
-
     .Navar>* {
         /* background-color: red; */
         /* border: 3px solid white; */

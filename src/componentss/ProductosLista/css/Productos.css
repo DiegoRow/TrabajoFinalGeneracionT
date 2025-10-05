@@ -60,7 +60,6 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(var(--num-rows, 10px));
-        /* gap: 1em; */
     }
 
 

@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom"
 import data from "/src/JsonDB/productListTest.json"
 import "./SelectProduct.css"
 
-
+import { useDispatch } from "react-redux"
+import { agregarItem } from "../../Redux/slices/Carrito"
 
 export default function SelectProduct() {
     const { id } = useParams()
@@ -18,17 +19,27 @@ export default function SelectProduct() {
         )
     }
 
-
     const defaultImage = (e) => {
         e.target.src = "/imgProducts/sin-imagen.jpg"
     }
 
+    
+    const dispatch = useDispatch()
+
     return (
-        <div>
-            <p>Nombre del Producto es {papuducto.nombre}</p>
-            <p>con descripcion: {papuducto.desc}</p>
-            <img src={papuducto.imagen} alt={papuducto.nombre} onError={defaultImage} />
-            <p>precio: {papuducto.precio} </p>
-        </div>
+        <>
+            <div>
+                <p>Nombre del Producto es {papuducto.nombre}</p>
+                <p>con descripcion: {papuducto.desc}</p>
+                <img src={papuducto.imagen} alt={papuducto.nombre} onError={defaultImage} />
+                <p>precio: {papuducto.precio} </p>
+            </div>
+
+            <div>
+                <button onClick={() => dispatch(agregarItem(papuducto))}>
+                    Agregar al Carrito
+                </button>
+            </div>
+        </>
     )
 }
