@@ -1,7 +1,7 @@
 # Projecto Final Generación T
 ## Integrantes:
- - Diego Ceballos
- - Fernando Barrera Soto
+ - Diego Ceballos [sección html, css y js]
+ - Fernando Barrera Soto [sección backend]
 
 ## Link de Netlify
 https://tpfinal-generaciont-diego-y-fer.netlify.app
@@ -13,5 +13,6 @@ https://tpfinal-generaciont-diego-y-fer.netlify.app
 - Fácil Manejo de nuevos productos mediante Hoja de Excel
 - 
 ### Objetivos Secundarios
+- El texto de búsqueda filtre los productos en el menu principal ✅
 - Compatibilidad con Smartphones (Responsividad en la Página) ✅
 -

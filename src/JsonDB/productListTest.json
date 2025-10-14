@@ -1,9 +1,10 @@
 [
-    {
+    {   
+        "Aclaracion": "PARA AÑADIR ESPACIOS EN LA DESCRIPCION PONER '\n', eso pues :v",
         "id": 1,
         "nombre": "Mouse Glorious Model O 2 PRO Wireless",
         "imagen": "/imgProducts/mouse1.jpg",
-        "desc": "Descripcion1",
+        "desc": "DPI: Hasta 9000 \n Peso: 25g",
         "precio": 1200
     },
     {

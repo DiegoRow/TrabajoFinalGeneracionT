@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 // reducers
 import cartSlice from "./slices/Carrito.js"
+import SearchSlice from "./slices/Buscador.js"
 
 export default configureStore({
     reducer: {
-        cartShop: cartSlice
+        cartShop: cartSlice,
+        buscador: SearchSlice
     }
 })

@@ -13,7 +13,9 @@ const cartSlice = createSlice({
             const mismoItem = state.listaItem.find((item) => item.id === nuevoItem.id)
 
             if (mismoItem) {
-                mismoItem.cantidad += 1
+                if (mismoItem.cantidad < 10) {
+                    mismoItem.cantidad += 1
+                }
             } else {
                 state.listaItem.push({ ...nuevoItem, cantidad: 1 })
             }
@@ -32,8 +34,10 @@ const cartSlice = createSlice({
             if (yaExiste) {
                 if (cantidad <= 0) {
                     state.listaItem = state.listaItem.filter((item) => item.id !== id)
-                } else {
+                } else if (cantidad <= 10) {
                     yaExiste.cantidad = cantidad
+                } else {
+                    yaExiste.cantidad = 10
                 }
             }
         },

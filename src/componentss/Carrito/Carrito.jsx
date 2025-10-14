@@ -27,7 +27,7 @@ export default function () {
     return (
         <>
             <div className="textlol">
-                <h2>Carrito con sus Productos:</h2>
+                <h2>Carrito con tus Productos:</h2>
             </div>
 
             <div className="carrito">

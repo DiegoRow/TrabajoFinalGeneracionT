@@ -23,23 +23,19 @@ export default function EachItem({ id, name, image, quantity }) {
             <p className="textitolol">{name}</p>
 
             <div className="cositoPaCantidad">
-                <div className="botonStyle">
-                    <AddIcon fontSize="large"
-                        onClick={() => dispatch(changeCantidad({ id: id, cantidad: quantity + 1 }))
-                        } />
+                <div className="botonStyle" onClick={() => dispatch(changeCantidad({ id: id, cantidad: quantity + 1 }))}>
+                    <AddIcon fontSize="large" />
                 </div>
 
                 <h2>{quantity}</h2>
 
-                <div className="botonStyle">
-                    <RemoveIcon fontSize="large"
-                        onClick={() => dispatch(changeCantidad({ id: id, cantidad: quantity - 1 }))} />
+                <div className="botonStyle" onClick={() => dispatch(changeCantidad({ id: id, cantidad: quantity - 1 }))}>
+                    <RemoveIcon fontSize="large" />
                 </div>
             </div>
 
-            <div className="botonStyle perupe">
-                <CloseRoundedIcon fontSize="large"
-                    onClick={() => dispatch(quitarItem(id))} />
+            <div className="botonStyle perupe" onClick={() => dispatch(quitarItem(id))} >
+                <CloseRoundedIcon fontSize="large" />
             </div>
         </div>
     )

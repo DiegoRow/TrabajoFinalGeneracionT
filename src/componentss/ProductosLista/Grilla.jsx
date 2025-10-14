@@ -4,6 +4,7 @@ import "./css/ProductosPhone.css"
 import Productito from "./Product.jsx"
 import Checador from "./CheckBoxChanger/CustomCheckbox.jsx"
 import data from "/src/JsonDB/productListTest.json"
+import { useSelector } from 'react-redux';
 
 
 
@@ -15,10 +16,20 @@ export default function Grilla() {
     // cambiar la clase cuando cambia el checkbox
     const CheckChanged = (check) => {
         setChequeado(check);
-        // console.log("el checkbox está en ", check)
     }
 
-    const eachProduct = data.map((e) => {
+    
+    // filtrado de la busqueda
+    const search = useSelector((state) => state.buscador.text || "")
+    const textito = search.trim().toLowerCase()
+    
+    const textFiltrado = textito ? data.filter((e)=>{
+        const nombre = (e.nombre || "").toLowerCase()
+        const descri = (e.desc || "").toLowerCase()
+        return nombre.includes(textito) || descri.includes(textito)
+    }) : data
+    
+    const eachProduct = textFiltrado.map((e) => {
         return <Productito
             id={e.id}
             nombre={e.nombre}
@@ -27,6 +38,7 @@ export default function Grilla() {
             viewmode={Chequeado}
         />
     })
+
     return (
         <>
             <div className="textlol">
@@ -39,7 +51,6 @@ export default function Grilla() {
                 <div
                     className={`${Chequeado ? "grillaRow" : "grilla"}`}
                     style={Chequeado ? { "--num-rows": data.length } : {}}>
-
 
                     {/* .map para que cree un producto por cada item que detecte en el json*/}
                     {eachProduct}

@@ -9,17 +9,31 @@
         justify-items: end;
         width: 100%;
     }
+
     .Navar>* {
-        /* background-color: red; */
-        /* border: 3px solid white; */
         display: flex;
         align-items: center;
     }
 
+    .logotipo{
+        width: 5vw;
+    }
+    @keyframes boxshadowred {
+        0%{
+            box-shadow: 0 0 0px red;
+        }
+        100%{
+            box-shadow: 0 0 25px red;
+        }
+    }
     .logotype {
-        height: 50px;
+        /* height: 50px; */
+        width: 100%;
         aspect-ratio: 1/1;
         border-radius: .5em;
+    }
+    .logotype:hover{
+        animation: boxshadowred .5s forwards;
     }
 
     .carAndLogin {
@@ -40,7 +54,21 @@
         color: white;
         font-family: "Comic Relief";
         font-size: 1.2em;
+        position: relative;
         /* border: 2px solid white; */
+    }
+
+    .numberOfItem {
+        top: -5px;
+        right: -8px;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 50%;
+        padding: 2px 6px;
+        line-height: 1;
+        font-family: Roboto Flex;
     }
 }
 
@@ -91,5 +119,18 @@
         font-family: "Comic Relief";
         font-size: 1em;
         text-align: center;
+    }
+
+    .numberOfItem {
+        top: -5px;
+        right: -8px;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 50%;
+        padding: 2px 6px;
+        line-height: 1;
+        font-family: Roboto Flex;
     }
 }
