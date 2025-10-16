@@ -1,45 +1,57 @@
-import { Link, useParams } from "react-router-dom"
-import data from "/src/JsonDB/productListTest.json"
-import "./SelectProduct.css"
+import { Link, useParams } from "react-router-dom";
+import useProductos from "../ProductosLista/useProductos";
+import "./SelectProduct.css";
+import { useDispatch } from "react-redux";
+import { agregarItem, vaciarLista } from "../../Redux/slices/Carrito";
+import { useEffect, useState } from "react";
 
-import { useDispatch } from "react-redux"
-import { agregarItem, vaciarLista } from "../../Redux/slices/Carrito"
 
-import { useEffect } from "react"
 
 export default function SelectProduct() {
-    const { id } = useParams()
-    const papuducto = data.find(p => p.id === Number(id))
+    const { id } = useParams();
+    const { productos, loading, error } = useProductos();
 
-    // chequea si el id coincide con alguno del array, sino tira error
-    if (!papuducto) {
+    const dispatch = useDispatch();
+
+    const [papuducto, setPapuducto] = useState(null);
+
+    // useEffect para actualizar el producto qe llega
+    useEffect(() => {
+        if (productos && productos.length > 0) {
+            const prod = productos.find((p) => String(p.id).trim() === String(id).trim());
+            setPapuducto(prod || null);
+        }
+    }, [productos, id]);
+
+    //useEffect para la descripción
+    useEffect(() => {
+        if (papuducto && papuducto.desc) {
+            // reemplaza \n por <br>
+            const saltoTexto = papuducto.desc
+                .replace(/\\n/g, "<br />")
+                .replace(/\n/g, "<br />");
+
+            const descElement = document.getElementById("descripcion");
+            if (descElement) descElement.innerHTML = saltoTexto;
+        }
+    }, [papuducto]);
+
+    if (loading) return <h2 className="errorcito">Cargando producto...</h2>;
+    if (error) return <h2 className="errorcito">{error}</h2>;
+
+    if (!papuducto)
         return (
             <div className="errorcito">
-                <h2>No hay ningun Producto con ese ID</h2>
+                <h2>No hay ningún producto con ese ID</h2>
                 <h2>Vuelve a la página principal</h2>
             </div>
-        )
-    }
+        );
 
     const defaultImage = (e) => {
-        e.target.src = "/imgProducts/sin-imagen.jpg"
-    }
-
-    
-    const dispatch = useDispatch()
-    
-    // useEffect para la descripcion del producto
-    useEffect(() => {
-        const saltoTexto = papuducto.desc.replace(/\n/g, "<br />")
-        const descElement = document.getElementById("descripcion")
-
-        if (descElement){
-            descElement.innerHTML = saltoTexto
-        }
-    }, [papuducto.desc])
+        e.target.src = "/imgProducts/sin-imagen.jpg";
+    };
 
 
-    
     return (
         <>
             <div className="selectDiv">

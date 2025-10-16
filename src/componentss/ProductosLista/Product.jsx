@@ -3,7 +3,7 @@ import "./css/Productos.css"
 import "./css/ProductosPhone.css"
 
 
-export default function Productito({ id, nombre, imagen="/imgProducts/sin-imagen.jpg", precio, viewmode }) {
+export default function Productito({ id, nombre, imagen, precio, viewmode }) {
 
     const defaultImage = (e) => {
         e.target.src = "/imgProducts/sin-imagen.jpg"
