@@ -48,7 +48,7 @@
     .resumeCart {
         margin-top: 1.5em;
         display: grid;
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 70% 30%;
         justify-items: start;
         align-items: center;
         font-family: SFR PRO DISPLAY;

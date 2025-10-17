@@ -12,8 +12,8 @@ export default function Productito({ id, nombre, imagen, precio, viewmode }) {
     return (
         <Link
             to={`/producto/${id}`}
-            className={viewmode ? "productList" : "product"}
-        >
+            className={viewmode ? "productList" : "product"}>
+                
             <p>{nombre}</p>
             <img src={imagen} alt={"product-" + id} onError={defaultImage} />
             <p>{"$" + precio}</p>
