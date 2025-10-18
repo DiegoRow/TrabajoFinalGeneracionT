@@ -3,17 +3,27 @@ import "./css/Productos.css"
 import "./css/ProductosPhone.css"
 import Productito from "./Product.jsx"
 import Checador from "./CheckBoxChanger/CustomCheckbox.jsx"
-
 import useProductos from './useProductos.js';
+import { useDispatch, useSelector } from 'react-redux';
+import { limpiarTexto } from '../../Redux/slices/Buscador.js';
 
-import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 
 
 
 export default function Grilla() {
+    // al volver al main se limpia lo que halla en el buscador siempre y cuando se vuelva por el logo y no la busqueda
+    const dispatch = useDispatch()
+    const location = useLocation()
+
+    React.useEffect(() => {
+        if (!location.state?.fueBusqueda) {
+            dispatch(limpiarTexto())
+        }
+    }, [dispatch, location.state]);
+
     // const para obtener el json del excel
     const { productos, loading, error } = useProductos();
-
     // const de checado para el checkbox
     const [Chequeado, setChequeado] = React.useState(false);
 
@@ -34,9 +44,6 @@ export default function Grilla() {
 
     if (loading) return <h2 className="errorcito" >Cargando productos...</h2>;
     if (error) return <h2 className="errorcito">{error}</h2>;
-
-
-
 
 
 

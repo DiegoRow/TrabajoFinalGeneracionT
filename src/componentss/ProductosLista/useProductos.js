@@ -22,7 +22,6 @@ export default function useProductos() {
 
                 setProductos(parsed.data);
             } catch (err) {
-                console.error("Error cargando productos:", err);
                 setError("No se pudieron cargar los productos");
             } finally {
                 setLoading(false);

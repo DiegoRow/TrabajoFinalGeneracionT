@@ -1,0 +1,170 @@
+@media only screen and (min-width: 700px) {
+    .loginDiv {
+        width: 30vw;
+        height: 60vh;
+        background-color: rgba(255, 0, 0, 0.096);
+        justify-self: center;
+        margin: 2em;
+        margin-top: 3em;
+        border: .8em solid white;
+        border-radius: 1em;
+        padding: 1em;
+        /* display: grid; */
+        justify-items: center;
+    }
+
+    .loginDiv>h1 {
+        font-family: SFR PRO DISPLAY;
+        font-size: 3em;
+        letter-spacing: 2px;
+        margin-bottom: 1em;
+    }
+
+    .sectionInput {
+        display: flex;
+        flex-direction: column;
+        margin: 1em;
+        margin-bottom: 2em;
+        gap: .2em;
+        width: 60%;
+    }
+
+    .sectionInput>h3 {
+        font-family: SFR PRO DISPLAY;
+        letter-spacing: 1px;
+    }
+
+    .sectionInput>input {
+        height: 2.5em;
+        border-radius: 1em;
+        padding-left: 1em;
+    }
+
+
+    .sectionBtn {
+        display: flex;
+        flex-direction: column;
+        margin: 1em;
+        width: 60%;
+        text-align: center;
+    }
+
+    .sectionBtn>input {
+        height: 2.5em;
+        border-radius: 1em;
+        background: linear-gradient(to right, blue, rgb(7, 229, 245));
+        border: 2px solid green;
+        color: black;
+        font-size: 1.1em;
+        margin-bottom: .5em;
+    }
+
+    .sectionBtn>input:hover {
+        cursor: pointer;
+    }
+
+    .sectionBtn>input:active {
+        background: linear-gradient(to right, rgb(0, 0, 165), rgb(0, 148, 158));
+        color: white;
+    }
+
+    .contraBait {
+        color: darkblue;
+        user-select: none;
+    }
+
+    .contraBait:hover {
+        cursor: pointer;
+    }
+
+    .contraBait:active {
+        color: rgb(0, 0, 248)
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .loginDiv {
+        width: 85vw;
+        height: 45vh;
+        background-color: rgba(255, 0, 0, 0.096);
+        justify-self: center;
+        margin: 1.5em;
+        margin-top: 3em;
+        border: .5em solid white;
+        border-radius: 1em;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loginDiv>h1 {
+        font-family: SFR PRO DISPLAY;
+        font-size: 2em;
+        letter-spacing: 1px;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    .sectionInput {
+        display: flex;
+        flex-direction: column;
+        margin: 0.8em 0;
+        gap: .3em;
+        width: 80%;
+    }
+
+    .sectionInput>h3 {
+        font-family: SFR PRO DISPLAY;
+        letter-spacing: .5px;
+        font-size: 1em;
+    }
+
+    .sectionInput>input {
+        height: 2.2em;
+        border-radius: 1em;
+        padding-left: 1em;
+        font-size: 1em;
+    }
+
+    .sectionBtn {
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0;
+        width: 80%;
+        text-align: center;
+    }
+
+    .sectionBtn>input {
+        height: 2.5em;
+        border-radius: 1em;
+        background: linear-gradient(to right, blue, rgb(7, 229, 245));
+        border: 2px solid green;
+        color: black;
+        font-size: 1em;
+        margin-bottom: .8em;
+    }
+
+    .sectionBtn>input:hover {
+        cursor: pointer;
+    }
+
+    .sectionBtn>input:active {
+        background: linear-gradient(to right, rgb(0, 0, 165), rgb(0, 148, 158));
+        color: white;
+    }
+
+    .contraBait {
+        color: darkblue;
+        user-select: none;
+        font-size: .9em;
+    }
+
+    .contraBait:hover {
+        cursor: pointer;
+    }
+
+    .contraBait:active {
+        color: rgb(0, 0, 248);
+    }
+}
